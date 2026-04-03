@@ -21961,7 +21961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-svg@npm:>=15.4.0 <15.13.0":
+"react-native-svg@npm:15.12.1":
   version: 15.12.1
   resolution: "react-native-svg@npm:15.12.1"
   dependencies:
@@ -21989,7 +21989,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-test-app@npm:^3.9.2":
+"react-native-svg@patch:react-native-svg@npm%3A15.12.1#~/.yarn/patches/react-native-svg-npm-15.12.1-macos-fix.patch":
+  version: 15.12.1
+  resolution: "react-native-svg@patch:react-native-svg@npm%3A15.12.1#~/.yarn/patches/react-native-svg-npm-15.12.1-macos-fix.patch::version=15.12.1&hash=3743dd"
+  dependencies:
+    css-select: "npm:^5.1.0"
+    css-tree: "npm:^1.1.3"
+    warn-once: "npm:0.1.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10c0/62ec5695b358f7e3bd6bb41c40ac13e975d30444047718a6aed2cb227dec2d74ee7aefc7dde87592f59adbc0cce84052d8186507e7a6766876f4b97d472f1d8e
+  languageName: node
+  linkType: hard
+
+"react-native-test-app@npm:3.10.22":
   version: 3.10.22
   resolution: "react-native-test-app@npm:3.10.22"
   dependencies:
@@ -22059,6 +22073,42 @@ __metadata:
     init-test-app: scripts/init.mjs
     install-windows-test-app: windows/app.mjs
   checksum: 10c0/d83f1cec79d4f5629e4370b0a378846d4a995070a025328b28883873a26b5a44fe883f7e64cb482d0dd49364e3d8884a3568f81293e56fd16a0b65efee4c3591
+  languageName: node
+  linkType: hard
+
+"react-native-test-app@patch:react-native-test-app@npm%3A3.10.22#~/.yarn/patches/react-native-test-app-npm-3.10.22-remove-isDebuggingRemotely.patch":
+  version: 3.10.22
+  resolution: "react-native-test-app@patch:react-native-test-app@npm%3A3.10.22#~/.yarn/patches/react-native-test-app-npm-3.10.22-remove-isDebuggingRemotely.patch::version=3.10.22&hash=aacc61"
+  dependencies:
+    "@rnx-kit/react-native-host": "npm:^0.5.0"
+    ajv: "npm:^8.0.0"
+    cliui: "npm:^8.0.0"
+    fast-xml-parser: "npm:^4.0.0"
+    prompts: "npm:^2.4.0"
+    semver: "npm:^7.3.5"
+    uuid: "npm:^10.0.0"
+  peerDependencies:
+    "@callstack/react-native-visionos": 0.73 - 0.76
+    "@expo/config-plugins": ">=5.0"
+    react: 17.0.1 - 19.0
+    react-native: 0.66 - 0.76 || >=0.77.0-0 <0.77.0
+    react-native-macos: ^0.0.0-0 || 0.66 || 0.68 || 0.71 - 0.76
+    react-native-windows: ^0.0.0-0 || 0.66 - 0.76
+  peerDependenciesMeta:
+    "@callstack/react-native-visionos":
+      optional: true
+    "@expo/config-plugins":
+      optional: true
+    react-native-macos:
+      optional: true
+    react-native-windows:
+      optional: true
+  bin:
+    configure-test-app: scripts/configure.mjs
+    init: scripts/init.mjs
+    init-test-app: scripts/init.mjs
+    install-windows-test-app: windows/test-app.mjs
+  checksum: 10c0/50c580197e177bdcafa455be3d39792a62618a751f1f0b0d94433e5c640eaefa228d6b84f629bda70ad504b1f8bcce33b833b28a78649a04e2726a2c1838c492
   languageName: node
   linkType: hard
 

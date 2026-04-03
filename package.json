@@ -56,6 +56,8 @@
   "resolutions": {
     "axios": "^1.13.5",
     "expect-webdriverio": "patch:expect-webdriverio@npm%3A5.6.1#~/.yarn/patches/expect-webdriverio-npm-5.6.1-69666d39e9.patch",
+    "react-native-svg@>=15.4.0 <15.13.0": "patch:react-native-svg@npm%3A15.12.1#~/.yarn/patches/react-native-svg-npm-15.12.1-macos-fix.patch",
+    "react-native-test-app@^3.9.2": "patch:react-native-test-app@npm%3A3.10.22#~/.yarn/patches/react-native-test-app-npm-3.10.22-remove-isDebuggingRemotely.patch",
     "unicorn-magic": "^0.4.0"
   },
   "engines": {

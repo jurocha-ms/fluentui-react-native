@@ -1,0 +1,16 @@
+diff --git a/apple/Elements/RNSVGImage.mm b/apple/Elements/RNSVGImage.mm
+index 0000000000000000000000000000000000000000..1111111111111111111111111111111111111111 100644
+--- a/apple/Elements/RNSVGImage.mm
++++ b/apple/Elements/RNSVGImage.mm
+@@ -233,9 +233,9 @@
+
+   _reloadImageCancellationBlock = [[self.bridge moduleForName:@"ImageLoader"]
+       loadImageWithURLRequest:src.request
+-                     callback:^(__unused NSError *error, UIImage *image) {
++                     callback:^(__unused NSError *error, RCTPlatformImage *image) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+-                         self->_image = CGImageRetain(image.CGImage);
++                         self->_image = CGImageRetain(UIImageGetCGImageRef(image));
+                          self->_imageSize = CGSizeMake(CGImageGetWidth(self->_image), CGImageGetHeight(self->_image));
+                          if (self->_onLoad) {
+                            RCTImageSource *sourceLoaded;

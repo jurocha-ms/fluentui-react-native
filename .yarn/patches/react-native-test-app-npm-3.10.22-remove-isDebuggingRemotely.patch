@@ -1,0 +1,17 @@
+diff --git a/ios/ReactTestApp/ReactInstance.swift b/ios/ReactTestApp/ReactInstance.swift
+index 0000000000000000000000000000000000000000..1111111111111111111111111111111111111111 100644
+--- a/ios/ReactTestApp/ReactInstance.swift
++++ b/ios/ReactTestApp/ReactInstance.swift
+@@ -77,12 +77,6 @@
+
+     func initReact(bundleRoot: String?, onDidInitialize: @escaping () -> Void) {
+         if host != nil {
+-            if remoteBundleURL == nil {
+-                // When loading the embedded bundle, we must disable remote
+-                // debugging to prevent the bridge from getting stuck in
+-                // -[RCTWebSocketExecutor executeApplicationScript:sourceURL:onComplete:]
+-                RCTDevSettings().isDebuggingRemotely = false
+-            }
+             RCTTriggerReloadCommandListeners("ReactTestApp")
+             return
+         }
